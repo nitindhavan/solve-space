@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
-class SidebarMenu extends StatelessWidget {
+import '../../utils/colors.dart';
+
+class CustomDrawer extends StatelessWidget {
   final int selectedIndex;
   final Function(int) onMenuItemTap;
 
-  SidebarMenu({
+  CustomDrawer({
     required this.selectedIndex,
     required this.onMenuItemTap,
   });
@@ -12,8 +14,14 @@ class SidebarMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 250,
-      color: Color(0xFF1E1E2E), // Background color to match the sidebar
+      width: 350,
+      padding: EdgeInsets.all(16),
+      margin: EdgeInsets.all(16),
+      decoration: BoxDecoration(
+          color: AppColor.primaryColor,
+          boxShadow: [BoxShadow(color: Colors.black,blurRadius: 10)],
+          borderRadius: BorderRadius.circular(8)
+      ), // Background color to match the sidebar
       child: Column(
         children: [
           Padding(
@@ -50,7 +58,7 @@ class SidebarMenu extends StatelessWidget {
                 _buildMenuItem(
                   index: 2,
                   icon: Icons.insert_chart,
-                  label: 'Communities',
+                  label: 'Community',
                 ),
                 _buildMenuItem(
                   index: 3,
@@ -70,7 +78,6 @@ class SidebarMenu extends StatelessWidget {
               ],
             ),
           ),
-          Divider(color: Colors.grey),
         ],
       ),
     );

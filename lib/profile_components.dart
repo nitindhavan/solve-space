@@ -38,7 +38,7 @@ class ProfileDashboardPage extends StatelessWidget {
                       ),
                       SizedBox(height: 8),
                       Text(
-                        'Flutter Developer | Community Builder',
+                        'Developer | Community Builder',
                         style: TextStyle(
                           color: Colors.grey,
                           fontSize: 14,
@@ -153,9 +153,9 @@ class ProfileDashboardPage extends StatelessWidget {
               itemCount: 3,
               itemBuilder: (context, index) {
                 return _buildActivityCard(
-                  title: 'Joined the "Flutter Devs" Community',
+                  title: 'Joined the "Devs" Community',
                   description:
-                      'Became an active member of the Flutter developers group.',
+                      'Became an active member of the Fdevelopers group.',
                   timestamp: '2 days ago',
                 );
               },

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import 'package:solvespace/utils/apiconfig.dart';
 
 class CommunitiesPage extends StatefulWidget {
   @override
@@ -21,7 +22,7 @@ class _CommunitiesPageState extends State<CommunitiesPage> {
   }
 
   Future<void> fetchCommunityPosts() async {
-    final url = Uri.parse('http://localhost:3000/api/questions/getQuestions'); // Replace with your API endpoint
+    final url = Uri.parse('${ApiConfig.baseUrlApp}api/questions/getQuestions'); // Replace with your API endpoint
     try {
       final response = await http.get(url);
       if (response.statusCode == 200) {

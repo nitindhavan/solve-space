@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:solvespace/utils/apiconfig.dart';
 
 class PostQuestionPage extends StatelessWidget {
   final List<String> categories = ['Developer', 'HR', 'Design', 'System', 'Cloud'];
@@ -9,7 +10,7 @@ class PostQuestionPage extends StatelessWidget {
   final TextEditingController tagsController = TextEditingController();
 
   Future<void> postQuestion(String title, String description, String category, String tags) async {
-    const String apiUrl = 'http://localhost:3000/api/questions/ask';
+    const String apiUrl = '${ApiConfig.baseUrlApp}api/questions/ask';
     const String userId = '675725dce320c7e635d9881d'; // Replace with actual constant userId
 
     try {
@@ -98,7 +99,7 @@ class PostQuestionPage extends StatelessWidget {
                 controller: tagsController,
                 style: TextStyle(color: Colors.white),
                 decoration: InputDecoration(
-                  hintText: "Enter tags (e.g., Flutter, UI, Design)",
+                  hintText: "Enter tags (e.g. Developement, UI, Design)",
                   hintStyle: TextStyle(color: Colors.grey),
                   filled: true,
                   fillColor: Color(0xFF2C2C3E),

@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 class NewsPage extends StatelessWidget {
   final List<Map<String, String>> newsArticles = [
     {
-      'title': 'Breaking News: Flutter 3.0 Released!',
-      'description': 'Flutter 3.0 brings significant improvements to app performance and support for new platforms.',
+      'title': 'Breaking News: Titan 17.0.0 Released!',
+      'description': 'Titan 17.0.0 brings significant improvements to app performance and support for new platforms.',
       'image': 'https://via.placeholder.com/500x300',
-      'author': 'Flutter Dev',
+      'author': 'Dev',
       'time': '2 hours ago',
       'upvotes': '120'
     },
